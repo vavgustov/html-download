@@ -1,0 +1,19 @@
+{
+  "homepage": "https://github.com/vavgustov/html-download",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Avgustov",
+      "email": "vavgustov@gmail.com"
+    }
+  ],
+  "require": {
+    "symfony/console": "v2.5.7",
+    "symfony/filesystem": "v2.5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "HtmlDownload\\": "src"
+    }
+  }
+}
