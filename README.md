@@ -12,3 +12,6 @@ A simple PHP console application to download HTML files.
 2. Install the Composer dependencies: `composer install`.
 3. Configure links to download at `config/settings.php`.
 4. Execute in terminal `php download download-links`.
+
+## TODO
+Move from cURL to https://github.com/guzzle/guzzle.

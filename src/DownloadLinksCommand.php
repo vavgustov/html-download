@@ -7,7 +7,7 @@ use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DownloadList extends Command {
+class DownloadLinksCommand extends Command {
     public function configure()
     {
         $this->setName('download-links')

@@ -2,11 +2,11 @@
 
 <?php
 
-use HtmlDownload\DownloadList;
+use HtmlDownload\DownloadLinksCommand;
 use Symfony\Component\Console\Application;
 
 require 'vendor/autoload.php';
 
 $app = new Application('HTML Download', '1.0');
-$app->add(new DownloadList);
+$app->add(new DownloadLinksCommand);
 $app->run();
