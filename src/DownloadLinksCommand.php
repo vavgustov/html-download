@@ -2,6 +2,7 @@
 
 namespace HtmlDownload;
 
+use GuzzleHttp\Client;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Console\Input\InputInterface;
@@ -26,8 +27,9 @@ class DownloadLinksCommand extends Command {
             $file_name = $folder . "/" . date('m_d_y') . ".html";
 
             if (!$filesystem->exists($file_name)) {
-                $command = "curl -o {$file_name} {$download['url']}";
-                shell_exec($command);
+                $client = new Client();
+                $response = $client->get($download['url'])->getBody();
+                file_put_contents($file_name, $response);
             }
         }
     }

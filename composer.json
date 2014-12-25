@@ -8,8 +8,9 @@
     }
   ],
   "require": {
-    "symfony/console": "v2.5.7",
-    "symfony/filesystem": "v2.5.7"
+    "symfony/console": "~2.6",
+    "symfony/filesystem": "~2.6",
+    "guzzlehttp/guzzle": "~5.1"
   },
   "autoload": {
     "psr-4": {
