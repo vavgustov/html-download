@@ -12,7 +12,7 @@ class DownloadLinksCommand extends Command {
     public function configure()
     {
         $this->setName('download-links')
-            ->setDescription('Download HTML pages from config/settings.php using curl.');
+            ->setDescription('Download HTML pages from config/settings.php using Guzzle.');
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
