@@ -27,15 +27,15 @@ class DownloadLinksCommand extends Command {
     {
         $settings = require __DIR__ . "/../config/settings.php";
 
-        foreach ($settings['download'] as $download) {
-            // prepare file system
-            $filesystem = new Filesystem();
-            $folder = $settings['directory']['folder'] . "/" . $download['folder'];
-            $filesystem->mkdir($folder, $settings['directory']['mode']);
+        foreach ($settings['download'] as $download) {            
+            $folder = $settings['directory']['folder'] . "/" . $download['folder'];            
             $file_name = $folder . "/" . date('m_d_y') . ".html";
+            
+            $filesystem = new Filesystem();
+            if (!$filesystem->exists($file_name)) {                           
+                $filesystem->mkdir($folder, $settings['directory']['mode']);
 
-            // download html
-            if (!$filesystem->exists($file_name)) {
+                // download html
                 $client = new Client();
                 $response = $client->get($download['url'])->getBody();
                 file_put_contents($file_name, $response);
