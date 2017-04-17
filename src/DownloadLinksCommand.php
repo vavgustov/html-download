@@ -29,7 +29,7 @@ class DownloadLinksCommand extends Command {
 
         foreach ($settings['download'] as $download) {            
             $folder = $settings['directory']['folder'] . "/" . $download['folder'];            
-            $file_name = $folder . "/" . date('m_d_y') . ".html";
+            $file_name = $folder . "/" . date('m_d_y-H_i_s') . ".html";
             
             $filesystem = new Filesystem();
             if (!$filesystem->exists($file_name)) {                           
