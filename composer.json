@@ -10,7 +10,7 @@
   "require": {
     "symfony/console": "~2.6",
     "symfony/filesystem": "~2.6",
-    "guzzlehttp/guzzle": "~5.1"
+    "guzzlehttp/guzzle": "~5.3"
   },
   "autoload": {
     "psr-4": {
